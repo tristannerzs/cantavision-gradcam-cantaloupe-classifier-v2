@@ -1,8 +1,8 @@
 ---
 title: CantaVision Grad-CAM Studio v2
 emoji: 🍈
-colorFrom: orange
-colorTo: yellow
+colorFrom: yellow
+colorTo: green
 sdk: docker
 app_port: 7860
 ---
