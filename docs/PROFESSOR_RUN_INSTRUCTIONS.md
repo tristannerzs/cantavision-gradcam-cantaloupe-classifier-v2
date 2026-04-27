@@ -1,10 +1,10 @@
-# Professor Run Instructions
+# Sir Joel Run Instructions
 
 ## Project Title
 
 **CantaVision Grad-CAM Studio: A Web-Deployed Cantaloupe Classification System Using Transfer Learning, Region-of-Interest Cropping, and Interactive Model Explainability**
 
-## Student Project Description
+## Project Description
 
 I made this website as the deployment component of my binary cantaloupe image classification project. The web application allows a user to upload an image, select a specific region of interest, classify the selected crop as **cantaloupe** or **not_cantaloupe**, and inspect the prediction using a Grad-CAM heatmap similar to the heatmap figures from my notebook output.
 
