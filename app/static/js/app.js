@@ -2,7 +2,12 @@ const $ = (id) => document.getElementById(id);
 const toast = $('toast'), sourceImg = $('sourceImg'), cropStage = $('cropStage'), roiBox = $('roiBox'), imageInput = $('imageInput');
 let selectedFile = null, mode = 'roi', latestProb = null;
 let roi = { xPct: 26, yPct: 20, wPct: 45, hPct: 45 }, roiDrag = null, heatDrag = null;
-const facts = ['Tip: use ROI mode to classify one fruit in a multi-fruit image.','The blocky heatmap uses a jet-style color map like the notebook screenshots.','Red/yellow areas are strongest Grad-CAM activations.','Drag the heatmap in the studio to study different locations visually.','Replace the NPC by editing app/static/assets/npc.svg.'];
+const facts = ['Red and yellow regions show the strongest Grad-CAM activations.',
+  'Blue regions show weaker model activation for the selected prediction.',
+  'ROI mode helps classify one fruit from a multi-fruit image.',
+  'The overlay shows how model focus aligns with rind texture, flesh color, leaves, or background.',
+  'Changing the threshold changes the final decision boundary, not the raw model probability.',
+  'The model prediction is based on the selected crop; the movable heatmap studio is for visual interpretation.'];
 function show(msg){ toast.textContent = msg; toast.hidden = false; setTimeout(() => toast.hidden = true, 4300); }
 function npc(msg){ $('npcSpeech').textContent = msg || facts[Math.floor(Math.random()*facts.length)]; }
 function clamp(v, min, max){ return Math.max(min, Math.min(max, v)); }
@@ -37,3 +42,4 @@ $('uploadModelBtn').addEventListener('click', async () => { const f = $('modelIn
 $('startBtn').addEventListener('click', () => $('workspace').scrollIntoView({behavior:'smooth'})); $('demoBtn').addEventListener('click', () => { selectedFile = null; sourceImg.src = '/static/assets/demo-wide.svg'; $('fileName').textContent = 'demo-wide.svg'; latestProb = .9905; $('cropOut').src='/static/assets/demo-crop.svg'; $('heatOut').src='/static/assets/demo-heat-block.svg'; $('overlayOut').src='/static/assets/demo-overlay.svg'; $('studyPanelImg').src='/static/assets/demo-study.svg'; $('studyPanelLink').href='/static/assets/demo-study.svg'; $('studioBase').src='/static/assets/demo-crop.svg'; $('studioHeat').src='/static/assets/demo-heat-smooth.svg'; $('gradcamNote').textContent='Demo mode: shows the same heatmap style and movement tools without a model.'; $('probFill').style.width='99%'; updateLiveDecision(); resetHeat(); npc('Demo loaded. Upload a real image to run the actual model.'); });
 function spawnParticles(){ const box=$('particles'); for(let i=0;i<18;i++){ const b=document.createElement('span'); b.className='melon-bit'; b.style.left=Math.random()*100+'vw'; b.style.animationDuration=(4+Math.random()*6)+'s'; b.style.animationDelay=(-Math.random()*8)+'s'; b.style.opacity=.35+Math.random()*.45; box.appendChild(b); } }
 window.addEventListener('resize', updateRoiInfo); setInterval(() => npc(), 11000); spawnParticles(); updateLabels(); placeRoi(); applyHeat();
+
