@@ -1,0 +1,6 @@
+Put the trained Keras model here and rename it exactly:
+
+cantaloupe_model.keras
+
+Recommended final model:
+MIDTERM_Tristan_Job_Ulita_Model2_EfficientNetB0.keras

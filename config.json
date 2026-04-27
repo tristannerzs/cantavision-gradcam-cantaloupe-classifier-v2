@@ -1,0 +1,12 @@
+{
+  "app_name": "CantaVision Grad-CAM Studio",
+  "academic_title": "CantaVision Grad-CAM Studio: A Web-Deployed Cantaloupe Classification System Using Transfer Learning, Region-of-Interest Cropping, and Interactive Model Explainability",
+  "student_name": "Tristan Job Ulita",
+  "school": "National University - Lipa | School of Architecture, Computing, and Engineering | BS Computer Science",
+  "model_filename": "cantaloupe_model.keras",
+  "image_size": [224, 224],
+  "positive_label": "cantaloupe",
+  "negative_label": "not_cantaloupe",
+  "default_threshold": 0.5,
+  "max_upload_mb": 25
+}
