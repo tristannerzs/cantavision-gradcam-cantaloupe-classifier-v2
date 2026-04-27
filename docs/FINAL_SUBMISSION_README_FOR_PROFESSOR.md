@@ -1,4 +1,4 @@
-# Final Submission Summary for Professor
+# Final Submission Summary for Sir Joel
 
 ## Project Title
 
@@ -8,7 +8,7 @@
 
 I made a complete web application for my cantaloupe classification project. It deploys my trained TensorFlow/Keras model and allows users to classify fruit images through a browser interface. The website also includes Grad-CAM explainability so the prediction can be visually interpreted.
 
-## Main Academic Components
+## Main Components
 
 - Transfer learning model deployment
 - Binary classification between cantaloupe and not_cantaloupe
