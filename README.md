@@ -20,7 +20,6 @@ I made a complete FastAPI web application where users can upload an image, draw 
 ## Main Features
 
 - Modern orange/white retro game-style interface
-- Cute replaceable pixel NPC and animated falling fruit particles
 - Image upload with mobile camera support
 - Interactive ROI crop box with drag and resize handles
 - Full-image mode and ROI-crop mode
@@ -122,17 +121,6 @@ P(cantaloupe) < threshold   -> not_cantaloupe
 
 The selected ROI is resized to `224 x 224` before prediction.
 
-## Important Instruction Files
-
-```text
-docs/PROFESSOR_RUN_INSTRUCTIONS.md
-docs/GITHUB_UPLOAD_GUIDE.md
-docs/HUGGINGFACE_DEPLOYMENT_GUIDE.md
-docs/FULL_STEP_BY_STEP_GITHUB_AND_HUGGINGFACE.md
-docs/ACADEMIC_PROJECT_TITLES.md
-docs/STUDENT_PRESENTATION_SCRIPT.md
-docs/FINAL_SUBMISSION_README_FOR_PROFESSOR.md
-```
 
 ## Customization
 
